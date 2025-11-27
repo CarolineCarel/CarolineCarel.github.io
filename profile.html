@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GitHub Profile — {{USERNAME}}</title>
+  <meta name="description" content="Profil singkat {{USERNAME}} — developer, projects, contact." />
+
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --maxw:900px;
+      color-scheme: dark;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071023 0%, #071422 60%);color:#e6eef6}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:18px;box-shadow:0 8px 40px rgba(2,6,23,0.6)}
+
+    .grid{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:14px;overflow:hidden;background:linear-gradient(90deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:40px;color:#031124}
+    .name{font-size:20px;font-weight:700;margin:0}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .bio{margin-top:14px;color:var(--muted);line-height:1.5}
+
+    .sections{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:16px;border-radius:12px}
+    h3{margin:0 0 10px 0}
+
+    .tech{display:flex;flex-wrap:wrap;gap:8px}
+    .tech .t{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+    .projects{display:flex;flex-direction:column;gap:10px}
+    .project{padding:10px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+    .project a{color:var(--accent);text-decoration:none}
+
+    .right .contact{display:flex;flex-direction:column;gap:8px}
+    .socials{display:flex;gap:10px;flex-wrap:wrap}
+    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);text-decoration:none;color:var(--muted);font-size:14px}
+
+    .stats img{width:100%;border-radius:10px}
+
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:720px){.grid{grid-template-columns:1fr;gap:12px}.sections{grid-template-columns:1fr}.wrap{margin:14px;padding:16px}}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header class="grid">
+      <div class="avatar" aria-hidden="true">JS</div>
+      <div>
+        <p class="name">{{FULL_NAME}} <span style="font-weight:500;color:var(--muted);font-size:13px">@{{USERNAME}}</span></p>
+        <div class="meta">
+          <span class="chip">Developer • Open Source</span>
+          <span class="chip">Indonesia</span>
+          <span class="chip">Available for collaborations</span>
+        </div>
+        <p class="bio">Saya seorang full‑stack developer yang fokus pada web dan aplikasi. Saat ini sedang membangun project <strong>ProjectName</strong> dan terbuka untuk kolaborasi. Saya suka menulis dokumentasi yang jelas dan membuat UI yang ramah pengguna.</p>
+      </div>
+    </header>
+
+    <section class="sections">
+      <div>
+        <div class="card">
+          <h3>Tech Stack</h3>
+          <div class="tech" aria-hidden="true">
+            <span class="t">JavaScript</span>
+            <span class="t">Node.js</span>
+            <span class="t">Express</span>
+            <span class="t">MongoDB</span>
+            <span class="t">React</span>
+            <span class="t">Tailwind</span>
+            <span class="t">Docker</span>
+            <span class="t">Git</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Selected Projects</h3>
+          <div class="projects">
+            <div class="project">
+              <div>
+                <div style="font-weight:600">Billiard Booking System</div>
+                <div style="font-size:13px;color:var(--muted)">Sistem booking meja & pembayaran (Node, MongoDB, EJS)</div>
+              </div>
+              <div><a href="https://github.com/{{USERNAME}}/billiard-booking" target="_blank" rel="noopener">View →</a></div>
+            </div>
+
+            <div class="project">
+              <div>
+                <div style="font-weight:600">YOLO Object Detection</div>
+                <div style="font-size:13px;color:var(--muted)">Deteksi objek menggunakan YOLO (training & inference)</div>
+              </div>
+              <div><a href="https://github.com/{{USERNAME}}/yolo-project" target="_blank" rel="noopener">View →</a></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>About / Bio</h3>
+          <p style="color:var(--muted)">Saya percaya pada keterbukaan (open source) dan kode yang mudah dipelihara. Di luar coding, saya seorang hopeless romantic dan suka musik akustik.</p>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="card contact">
+          <h3>Contact</h3>
+          <div style="font-size:14px;color:var(--muted)">Email: <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a></div>
+          <div style="font-size:14px;color:var(--muted)">Location: Jakarta, Indonesia</div>
+
+          <div style="margin-top:8px" class="socials">
+            <a href="https://github.com/{{USERNAME}}" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/{{USERNAME}}" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/{{USERNAME}}" target="_blank" rel="noopener">Twitter</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>GitHub Stats</h3>
+          <div class="stats">
+            <!-- Replace {{USERNAME}} with your GitHub username -->
+            <img src="https://github-readme-stats.vercel.app/api?username={{USERNAME}}&show_icons=true&theme=radical" alt="GitHub stats" />
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Badges</h3>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <img src="https://img.shields.io/badge/Top%20Language-JavaScript-yellow.svg" alt="lang" />
+            <img src="https://img.shields.io/badge/OS-Linux-blue.svg" alt="os" />
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Built with ❤️ — copy this file to <code>index.html</code> and push to <strong><em>USERNAME.github.io</em></strong> to host on GitHub Pages. Replace <code>{{USERNAME}}</code> and other placeholders.
+    </footer>
+  </main>
+</body>
+</html>
