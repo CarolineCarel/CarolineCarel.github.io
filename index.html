@@ -9,10 +9,12 @@
 
 <style>
 :root{
-  --accent:#e46a9f;
-  --bg:#f6f7fb;
+  --pink:#e46a9f;
+  --peach:#ffd6c9;
+  --lav:#d9dbff;
+  --bg:#f7f8fc;
   --card:#ffffff;
-  --text:#1d1d1f;
+  --text:#1c1d20;
   --muted:#5f6368;
   font-family:'Inter',system-ui;
 }
@@ -22,16 +24,16 @@
 body{
   margin:0;
   background:
-    radial-gradient(circle at 20% 15%, #ffe6f0 0%, transparent 38%),
-    radial-gradient(circle at 80% 65%, #e8ebff 0%, transparent 40%),
-    linear-gradient(180deg,#fafbff,#f0f2f8);
+    radial-gradient(circle at 18% 15%, var(--peach) 0%, transparent 38%),
+    radial-gradient(circle at 82% 65%, var(--lav) 0%, transparent 42%),
+    linear-gradient(180deg,#fbfcff,#f2f4fa);
   color:var(--text);
 }
 
 .container{
-  max-width:1050px;
+  max-width:1080px;
   margin:0 auto;
-  padding:36px 28px 60px;
+  padding:40px 32px 70px;
 }
 
 /* NAV */
@@ -39,49 +41,55 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:48px;
+  margin-bottom:36px;
 }
-nav b{
-  font-size:15px;
-  font-weight:700;
-}
+
 nav a{
   text-decoration:none;
   color:var(--muted);
   font-weight:500;
-  margin-left:20px;
+  margin-left:22px;
   font-size:14px;
 }
 
 /* HERO */
 .hero{
   display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:40px;
+  grid-template-columns:1.2fr .8fr;
+  gap:36px;
   align-items:center;
 }
 
 .hero h1{
-  font-size:36px;
+  font-size:42px;
+  line-height:1.15;
   margin:0;
+  font-weight:700;
 }
 
-.hero .role{
+.subtitle{
   margin:10px 0 14px;
+  font-size:15px;
   font-weight:600;
-  font-size:14px;
-  color:var(--accent);
+  color:var(--pink);
+}
+
+.education{
+  font-size:15px;
+  font-weight:600;
+  color:#333;
+  margin-bottom:16px;
 }
 
 .hero p{
-  font-size:15px;
-  line-height:1.65;
+  font-size:15.5px;
+  line-height:1.7;
   color:var(--muted);
-  max-width:560px;
+  max-width:580px;
 }
 
 .tags{
-  margin-top:18px;
+  margin-top:20px;
   display:flex;
   gap:10px;
   flex-wrap:wrap;
@@ -100,9 +108,9 @@ nav a{
 .photo{
   max-width:300px;
   aspect-ratio:3/4;
-  border-radius:22px;
-  background:linear-gradient(135deg,#f3a1bf,#cbcaff);
-  box-shadow:0 22px 50px rgba(0,0,0,.15);
+  border-radius:24px;
+  background:linear-gradient(135deg,#f6a8c4,#cfd2ff);
+  box-shadow:0 24px 55px rgba(0,0,0,.18);
   overflow:hidden;
 }
 .photo img{
@@ -113,11 +121,11 @@ nav a{
 
 /* SECTION */
 section{
-  margin-top:72px;
+  margin-top:70px;
 }
 
 section h2{
-  font-size:20px;
+  font-size:22px;
   margin-bottom:18px;
 }
 
@@ -125,69 +133,69 @@ section h2{
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
+  gap:22px;
 }
 
 .card{
   background:var(--card);
-  padding:22px 24px;
-  border-radius:18px;
-  box-shadow:0 16px 40px rgba(0,0,0,.06);
+  padding:24px 26px;
+  border-radius:20px;
+  box-shadow:0 16px 44px rgba(0,0,0,.07);
 }
 
 .card b{
   display:block;
   margin-bottom:6px;
-  font-size:14px;
+  font-size:14.5px;
 }
 
 .card p{
+  font-size:14px;
+  line-height:1.65;
   color:var(--muted);
-  font-size:13.5px;
-  line-height:1.6;
 }
 
 /* CONTACT */
 .contact{
-  background:linear-gradient(135deg,#fff,#f7f5ff);
-  border-radius:22px;
-  padding:32px 36px;
+  background:linear-gradient(135deg,#fff,#f6f4ff);
+  border-radius:24px;
+  padding:34px 38px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:32px;
-  box-shadow:0 24px 60px rgba(0,0,0,.08);
+  gap:34px;
+  box-shadow:0 26px 70px rgba(0,0,0,.08);
 }
 
 .contact h3{
   margin:0 0 10px;
-  font-size:18px;
+  font-size:20px;
 }
 
 .contact p{
+  font-size:14.5px;
+  line-height:1.65;
   color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
 }
 
 .contact-links a{
   display:block;
   text-decoration:none;
   font-weight:600;
-  color:var(--accent);
-  font-size:14px;
-  margin-bottom:12px;
+  font-size:14.5px;
+  color:var(--pink);
+  margin-bottom:14px;
 }
 
 /* FOOTER */
 .footer-note{
   text-align:center;
-  margin-top:56px;
+  margin-top:60px;
+  font-size:13.5px;
   color:#8a8a8a;
-  font-size:13px;
 }
 
 /* RESPONSIVE */
-@media(max-width:880px){
+@media(max-width:900px){
   .hero{grid-template-columns:1fr}
   .contact{grid-template-columns:1fr}
   nav{flex-direction:column;gap:10px}
@@ -199,7 +207,7 @@ section h2{
 <div class="container">
 
 <nav>
-  <b>Caroline Carel Cinda Suryadi</b>
+  <div></div>
   <div>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -209,23 +217,28 @@ section h2{
 
 <div class="hero" id="about">
   <div>
-    <h1>Business Analysis Track</h1>
-    <div class="role">
+    <h1>Caroline Carel Cinda Suryadi</h1>
+
+    <div class="subtitle">
       Interested in Business Analysis · Open to Internship Opportunities
     </div>
 
+    <div class="education">
+      3rd Year Information Systems Student — UNIKA Atma Jaya Jakarta
+    </div>
+
     <p>
-      3rd year Information Systems student at UNIKA Atma Jaya Jakarta with
-      strong organizational exposure in budgeting, financial monitoring,
-      and cross-division coordination. Currently seeking an internship
-      opportunity to develop practical business analysis skills.
+      An Information Systems student with strong organizational experience,
+      particularly in budgeting, financial monitoring, and cross-division coordination.
+      Comfortable working with structured processes, managing responsibilities,
+      and supporting teams to achieve shared goals.
     </p>
 
     <div class="tags">
       <span class="tag">Business Understanding</span>
       <span class="tag">Process Analysis</span>
       <span class="tag">Budget Planning</span>
-      <span class="tag">Stakeholder Coordination</span>
+      <span class="tag">Organizational Management</span>
     </div>
   </div>
 
@@ -242,9 +255,9 @@ section h2{
       <b>Student Senate — Faculty of Biosciences, Technology, and Innovation</b>
       <p>
         <strong>Treasurer (Two Consecutive Terms) · Jan 2025 – Present</strong><br><br>
-        Managed budgeting and financial planning for 6 divisions (29 members),
-        prepared official budget proposals, monitored expenditures, and ensured
-        transparent financial reporting for organizational programs.
+        Responsible for budgeting and financial planning across 6 divisions (29 members),
+        preparing university budget proposals, supervising program expenditures,
+        and ensuring transparent financial reporting.
       </p>
     </div>
 
@@ -252,8 +265,8 @@ section h2{
       <b>Student Senate — Faculty of Engineering</b>
       <p>
         <strong>Fundraising & Business Staff · Feb 2024 – Dec 2025</strong><br><br>
-        Supported fundraising initiatives and managed sales of 300+ units of
-        official merchandise to strengthen organizational revenue streams.
+        Supported fundraising initiatives and managed sales of 300+ units
+        of official merchandise to strengthen organizational revenue sustainability.
       </p>
     </div>
   </div>
@@ -262,10 +275,10 @@ section h2{
 <section id="contact">
   <div class="contact">
     <div>
-      <h3>Contact</h3>
+      <h3>Get in Touch</h3>
       <p>
-        Open to internship opportunities and professional discussions related
-        to business analysis and organizational improvement.
+        Currently open to internship opportunities and professional discussions
+        related to business analysis, organizational operations, and process improvement.
       </p>
     </div>
 
@@ -280,7 +293,7 @@ section h2{
 </section>
 
 <div class="footer-note">
-  © 2025 Caroline Carel Cinda Suryadi
+  © 2025 Caroline Carel Cinda Suryadi · Portfolio
 </div>
 
 </div>
