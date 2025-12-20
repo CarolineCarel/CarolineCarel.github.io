@@ -1,235 +1,273 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Caroline Carel Suryadi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Caroline Carel Cinda Suryadi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --accent:#e56a9d;
-      --text:#1a1a1a;
-      --muted:#555;
-      --line:#eaeaea;
-      font-family:'Inter',system-ui;
-    }
+<style>
+:root{
+  --accent:#e46a9f;
+  --bg1:#f8f9fb;
+  --bg2:#f1f3f8;
+  --card:#ffffff;
+  --text:#1c1c1c;
+  --muted:#666;
+  font-family:'Inter',system-ui;
+}
 
-    *{box-sizing:border-box}
+*{box-sizing:border-box}
 
-    body{
-      margin:0;
-      background:#f7f7f8;
-      color:var(--text);
-    }
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 20% 20%, #ffe3ee 0%, transparent 40%),
+    radial-gradient(circle at 80% 60%, #e9ecff 0%, transparent 45%),
+    linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--text);
+}
 
-    .page{
-      max-width:900px;
-      margin:60px auto;
-      background:#fff;
-      padding:56px 64px;
-      border-radius:16px;
-      box-shadow:0 10px 30px rgba(0,0,0,.05);
-    }
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:64px 32px 80px;
+}
 
-    header{
-      display:flex;
-      gap:32px;
-      align-items:center;
-      padding-bottom:32px;
-      border-bottom:1px solid var(--line);
-    }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:90px;
+}
+nav b{
+  font-size:16px;
+  font-weight:700;
+}
+nav a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+  margin-left:24px;
+}
 
-    .photo{
-      width:140px;
-      height:140px;
-      border-radius:14px;
-      overflow:hidden;
-      background:#eee;
-      flex-shrink:0;
-    }
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
 
-    .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+.hero h1{
+  font-size:44px;
+  margin:0;
+  line-height:1.2;
+}
 
-    h1{
-      margin:0;
-      font-size:28px;
-      font-weight:700;
-    }
+.hero .role{
+  margin:16px 0;
+  font-weight:600;
+  color:var(--accent);
+}
 
-    .role{
-      margin-top:6px;
-      font-size:14px;
-      font-weight:600;
-      color:var(--accent);
-    }
+.hero p{
+  font-size:16px;
+  line-height:1.75;
+  color:var(--muted);
+  max-width:560px;
+}
 
-    .location{
-      margin-top:6px;
-      font-size:14px;
-      color:var(--muted);
-    }
+.hero-tags{
+  margin-top:32px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
-    section{
-      margin-top:36px;
-    }
+.tag{
+  background:#fff;
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
 
-    h2{
-      font-size:16px;
-      margin-bottom:12px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.04em;
-    }
+/* PHOTO */
+.photo-wrap{
+  position:relative;
+  width:100%;
+  max-width:360px;
+  aspect-ratio:3/4;
+  border-radius:28px;
+  background:linear-gradient(135deg,#f2a2c0,#c9c8ff);
+  box-shadow:0 30px 70px rgba(0,0,0,.15);
+  overflow:hidden;
+}
+.photo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    p{
-      margin:0;
-      font-size:15px;
-      line-height:1.7;
-      color:var(--muted);
-    }
+/* SECTION */
+section{
+  margin-top:120px;
+}
 
-    ul{
-      margin:12px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.7;
-    }
+section h2{
+  font-size:24px;
+  margin-bottom:28px;
+}
 
-    li{margin-bottom:6px}
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
 
-    .experience{
-      margin-bottom:24px;
-    }
+.card{
+  background:var(--card);
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.06);
+}
 
-    .exp-title{
-      font-weight:600;
-      color:#222;
-    }
+.card b{
+  display:block;
+  margin-bottom:8px;
+  font-size:15px;
+}
 
-    .exp-meta{
-      font-size:14px;
-      color:#777;
-      margin-bottom:6px;
-    }
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.65;
+}
 
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:8px;
-      margin-top:12px;
-    }
+/* FOOTER */
+footer{
+  margin-top:140px;
+  padding-top:48px;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:24px;
+}
 
-    .skill{
-      font-size:14px;
-      color:#333;
-    }
+footer b{
+  font-size:15px;
+}
 
-    footer{
-      margin-top:42px;
-      padding-top:24px;
-      border-top:1px solid var(--line);
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      font-size:14px;
-    }
+footer .links a{
+  margin-right:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:var(--accent);
+}
 
-    footer a{
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    @media(max-width:700px){
-      .page{padding:36px 28px}
-      header{flex-direction:column;align-items:flex-start}
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  nav{flex-direction:column;gap:12px}
+}
+</style>
 </head>
 
 <body>
-  <main class="page">
+<div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <div class="photo">
-        <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Suryadi">
-      </div>
-      <div>
-        <h1>Caroline Carel Suryadi</h1>
-        <div class="role">Interested in Business Analysis · Open to Internship Opportunities</div>
-        <div class="location">Jakarta, Indonesia</div>
-      </div>
-    </header>
+  <!-- NAV -->
+  <nav>
+    <b>Caroline Carel Suryadi</b>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <!-- SUMMARY -->
-    <section>
-      <h2>Profile</h2>
+  <!-- HERO -->
+  <div class="hero" id="about">
+    <div>
+      <h1>Business Analysis Track</h1>
+
+      <div class="role">
+        Interested in Business Analysis · Open to Internship Opportunities
+      </div>
+
       <p>
-        Undergraduate student with strong organizational experience in budgeting,
-        financial monitoring, and program coordination. Interested in business analysis
-        as a career path, particularly in understanding business needs, structuring
-        processes, and supporting data-informed decision making. Known for being
-        reliable, collaborative, and detail-oriented.
+        3rd year Information Systems student at UNIKA Atma Jaya Jakarta with strong
+        organizational experience in budgeting, financial monitoring, and program execution.
+        Interested in business analysis, particularly in understanding business needs,
+        structuring processes, and supporting data-driven decision making.
       </p>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section>
-      <h2>Organizational Experience</h2>
+      <div class="hero-tags">
+        <span class="tag">Requirement Understanding</span>
+        <span class="tag">Process-Oriented Thinking</span>
+        <span class="tag">Budget & Cost Analysis</span>
+        <span class="tag">Stakeholder Coordination</span>
+      </div>
+    </div>
 
-      <div class="experience">
-        <div class="exp-title">
-          Student Senate – Faculty of Biosciences, Technology & Innovation (SMFBTI)
-        </div>
-        <div class="exp-meta">Treasurer · Jan 2025 – Present</div>
-        <ul>
-          <li>Managed budgeting and financial planning for 6 divisions (29 members).</li>
-          <li>Prepared and submitted budget proposals to the university.</li>
-          <li>Supervised financial execution of 7 organizational programs, including external collaboration.</li>
-          <li>Conducted financial monitoring and internal accounting processes.</li>
-        </ul>
+    <div class="photo-wrap">
+      <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Suryadi">
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Organizational Experience</h2>
+
+    <div class="cards">
+      <div class="card">
+        <b>
+          Student Senate — Faculty of Biosciences, Technology, and Innovation (SMFBTI)
+        </b>
+        <p>
+          <strong>Treasurer (Two Consecutive Terms) · January 2025 – Present</strong><br><br>
+          Led budgeting and financial planning for 6 divisions (29 members).
+          Prepared and submitted budget proposals to the university, supervised
+          financial execution of 7 organizational programs including external collaboration,
+          and conducted ongoing financial monitoring and internal accounting processes
+          to ensure accountability and transparency.
+        </p>
       </div>
 
-      <div class="experience">
-        <div class="exp-title">
-          Student Senate – Faculty of Engineering (SMFT)
-        </div>
-        <div class="exp-meta">Fundraising & Business Staff · Feb 2024 – Dec 2025</div>
-        <ul>
-          <li>Supported fundraising initiatives and income-generating activities.</li>
-          <li>Managed the sale of 300+ units of official merchandise.</li>
-        </ul>
+      <div class="card">
+        <b>
+          Student Senate — Faculty of Engineering (SMFT)
+        </b>
+        <p>
+          <strong>Fundraising & Business Staff · February 2024 – December 2025</strong><br><br>
+          Supported fundraising initiatives and income-generating activities,
+          including managing the sale of 300+ units of official merchandise,
+          contributing to organizational revenue and sustainability.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Relevant Skills</h2>
-      <div class="skills">
-        <div class="skill">Business Analysis Fundamentals</div>
-        <div class="skill">Requirement Understanding</div>
-        <div class="skill">Process-Oriented Thinking</div>
-        <div class="skill">Budget & Cost Analysis</div>
-        <div class="skill">Stakeholder Communication</div>
-        <div class="skill">Organizational Planning</div>
-      </div>
-    </section>
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div>
+      <b>Let’s Connect</b><br>
+      Jakarta, Indonesia
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <a href="cv.pdf" target="_blank">View CV (PDF)</a>
+    <div class="links">
+      <a href="cv.pdf" target="_blank">CV</a>
       <a href="mailto:carolineccsuryadi@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">LinkedIn</a>
-    </footer>
+    </div>
+  </footer>
 
-  </main>
+</div>
 </body>
 </html>
