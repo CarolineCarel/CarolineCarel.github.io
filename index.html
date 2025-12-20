@@ -10,8 +10,8 @@
 <style>
 :root{
   --accent:#e46a9f;
-  --bg1:#f8f9fb;
-  --bg2:#f1f3f8;
+  --soft:#fff0f6;
+  --bg:#f7f8fc;
   --card:#ffffff;
   --text:#1c1c1c;
   --muted:#666;
@@ -23,16 +23,16 @@
 body{
   margin:0;
   background:
-    radial-gradient(circle at 20% 20%, #ffe3ee 0%, transparent 40%),
-    radial-gradient(circle at 80% 60%, #e9ecff 0%, transparent 45%),
-    linear-gradient(180deg,var(--bg1),var(--bg2));
+    radial-gradient(circle at 15% 20%, #ffe3ee 0%, transparent 40%),
+    radial-gradient(circle at 85% 65%, #e9ecff 0%, transparent 45%),
+    linear-gradient(180deg,#fafbff,#f1f3f8);
   color:var(--text);
 }
 
 .container{
   max-width:1100px;
   margin:0 auto;
-  padding:64px 32px 80px;
+  padding:64px 32px 90px;
 }
 
 /* NAV */
@@ -64,7 +64,6 @@ nav a{
 .hero h1{
   font-size:44px;
   margin:0;
-  line-height:1.2;
 }
 
 .hero .role{
@@ -80,7 +79,7 @@ nav a{
   max-width:560px;
 }
 
-.hero-tags{
+.tags{
   margin-top:32px;
   display:flex;
   gap:12px;
@@ -97,9 +96,7 @@ nav a{
 }
 
 /* PHOTO */
-.photo-wrap{
-  position:relative;
-  width:100%;
+.photo{
   max-width:360px;
   aspect-ratio:3/4;
   border-radius:28px;
@@ -107,7 +104,7 @@ nav a{
   box-shadow:0 30px 70px rgba(0,0,0,.15);
   overflow:hidden;
 }
-.photo-wrap img{
+.photo img{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -149,31 +146,47 @@ section h2{
   line-height:1.65;
 }
 
-/* FOOTER */
-footer{
-  margin-top:140px;
-  padding-top:48px;
-  border-top:1px solid #ddd;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:24px;
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,#fff,#f7f4ff);
+  border-radius:28px;
+  padding:50px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  box-shadow:0 30px 80px rgba(0,0,0,.08);
 }
 
-footer b{
-  font-size:15px;
+.contact h3{
+  margin:0 0 12px;
+  font-size:22px;
 }
 
-footer .links a{
-  margin-right:20px;
+.contact p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.contact-links a{
+  display:block;
   text-decoration:none;
   font-weight:600;
   color:var(--accent);
+  margin-bottom:14px;
+}
+
+/* FOOTER NOTE */
+.footer-note{
+  text-align:center;
+  margin-top:90px;
+  color:#888;
+  font-size:14px;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
   nav{flex-direction:column;gap:12px}
 }
 </style>
@@ -184,7 +197,7 @@ footer .links a{
 
   <!-- NAV -->
   <nav>
-    <b>Caroline Carel Suryadi</b>
+    <b>Caroline Carel Cinda Suryadi</b>
     <div>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -208,16 +221,16 @@ footer .links a{
         structuring processes, and supporting data-driven decision making.
       </p>
 
-      <div class="hero-tags">
-        <span class="tag">Requirement Understanding</span>
-        <span class="tag">Process-Oriented Thinking</span>
-        <span class="tag">Budget & Cost Analysis</span>
+      <div class="tags">
+        <span class="tag">Business Understanding</span>
+        <span class="tag">Process Analysis</span>
+        <span class="tag">Budget & Cost Control</span>
         <span class="tag">Stakeholder Coordination</span>
       </div>
     </div>
 
-    <div class="photo-wrap">
-      <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Suryadi">
+    <div class="photo">
+      <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Cinda Suryadi">
     </div>
   </div>
 
@@ -227,46 +240,51 @@ footer .links a{
 
     <div class="cards">
       <div class="card">
-        <b>
-          Student Senate — Faculty of Biosciences, Technology, and Innovation (SMFBTI)
-        </b>
+        <b>Student Senate — Faculty of Biosciences, Technology, and Innovation (SMFBTI)</b>
         <p>
           <strong>Treasurer (Two Consecutive Terms) · January 2025 – Present</strong><br><br>
-          Led budgeting and financial planning for 6 divisions (29 members).
-          Prepared and submitted budget proposals to the university, supervised
-          financial execution of 7 organizational programs including external collaboration,
-          and conducted ongoing financial monitoring and internal accounting processes
-          to ensure accountability and transparency.
+          Led budgeting and financial planning for 6 divisions (29 members), prepared
+          budget proposals to the university, supervised financial execution of
+          organizational programs, and conducted financial monitoring to ensure
+          accountability and transparency.
         </p>
       </div>
 
       <div class="card">
-        <b>
-          Student Senate — Faculty of Engineering (SMFT)
-        </b>
+        <b>Student Senate — Faculty of Engineering (SMFT)</b>
         <p>
           <strong>Fundraising & Business Staff · February 2024 – December 2025</strong><br><br>
-          Supported fundraising initiatives and income-generating activities,
-          including managing the sale of 300+ units of official merchandise,
-          contributing to organizational revenue and sustainability.
+          Contributed to fundraising initiatives and managed the sale of 300+ units
+          of official merchandise, supporting organizational revenue sustainability.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <div>
-      <b>Let’s Connect</b><br>
-      Jakarta, Indonesia
-    </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <h3>Let’s Connect</h3>
+        <p>
+          I am currently seeking internship opportunities where I can learn,
+          grow, and contribute in a professional business environment.
+        </p>
+      </div>
 
-    <div class="links">
-      <a href="cv.pdf" target="_blank">CV</a>
-      <a href="mailto:carolineccsuryadi@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">LinkedIn</a>
+      <div class="contact-links">
+        <a href="cv.pdf" target="_blank">📄 Download CV</a>
+        <a href="mailto:carolineccsuryadi@gmail.com">✉️ carolineccsuryadi@gmail.com</a>
+        <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">
+          🔗 LinkedIn Profile
+        </a>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <div class="footer-note">
+    © 2025 Caroline Carel Cinda Suryadi · Portfolio
+  </div>
 
 </div>
 </body>
