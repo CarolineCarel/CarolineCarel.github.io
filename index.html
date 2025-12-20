@@ -9,10 +9,13 @@
 
 <style>
 :root{
-  --text:#111827;
+  --pink:#ec4899;
+  --peach:#ffe4d6;
+  --lav:#e8e9ff;
+  --cream:#fff8f1;
+  --card:#ffffff;
+  --text:#1f2937;
   --muted:#6b7280;
-  --border:#e5e7eb;
-  --accent:#ec4899;
   font-family:'Inter',system-ui;
 }
 
@@ -21,133 +24,207 @@
 body{
   margin:0;
   background:
-    linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
+    radial-gradient(circle at 15% 10%, var(--peach), transparent 45%),
+    radial-gradient(circle at 85% 65%, var(--lav), transparent 45%),
+    linear-gradient(180deg,var(--cream),#f4f6fb);
   color:var(--text);
 }
 
 .container{
-  max-width:920px;
+  max-width:980px;
   margin:0 auto;
-  padding:52px 26px 72px;
+  padding:40px 26px 64px;
 }
 
-/* HEADER */
-header{
-  margin-bottom:44px;
+/* ===== HERO ===== */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 250px;
+  gap:34px;
+  align-items:center;
 }
 
-h1{
-  font-size:40px;
+.hero h1{
+  font-size:46px;
   margin:0 0 10px;
   font-weight:700;
 }
 
 .intent{
-  font-size:18px;
-  font-weight:600;
-  color:var(--accent);
-  margin-bottom:8px;
+  font-size:19px;
+  font-weight:700;
+  color:var(--pink);
+  margin-bottom:14px;
 }
 
 .education{
-  font-size:15px;
-  color:var(--muted);
+  display:inline-block;
+  background:#ffffff;
+  padding:9px 16px;
+  border-radius:14px;
+  font-size:14.5px;
+  font-weight:600;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
   margin-bottom:18px;
 }
 
 .summary{
-  font-size:15.5px;
+  font-size:15.8px;
   line-height:1.7;
-  color:#374151;
-  max-width:760px;
+  color:var(--muted);
+  max-width:620px;
 }
 
-/* SECTION */
+/* PHOTO */
+.photo{
+  width:250px;
+  height:330px;
+  border-radius:22px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#f6a9c5,#d2d5ff);
+  box-shadow:0 24px 54px rgba(0,0,0,.18);
+}
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== SECTION ===== */
 section{
   margin-top:46px;
 }
 
-h2{
-  font-size:20px;
-  margin-bottom:20px;
-  font-weight:700;
+section h2{
+  font-size:22px;
+  margin-bottom:22px;
 }
 
-/* EXPERIENCE LIST (NO TIMELINE) */
-.exp-list{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+/* ===== EXPERIENCE WRAPPER ===== */
+.exp-wrapper{
+  background:linear-gradient(135deg,#ffffff,#fff5fa);
+  padding:28px 26px;
+  border-radius:26px;
+  box-shadow:0 28px 60px rgba(0,0,0,.08);
+}
+
+/* ===== TIMELINE (FIXED & CLEAN) ===== */
+.timeline{
+  position:relative;
+  padding-left:30px;
+}
+
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:7px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#e5e7eb;
 }
 
 .exp-item{
-  padding:22px 24px;
-  border:1px solid var(--border);
+  position:relative;
+  background:var(--card);
+  padding:20px 22px;
   border-radius:16px;
-  background:#fff;
+  box-shadow:0 14px 34px rgba(0,0,0,.07);
+  margin-bottom:18px;
 }
 
-.exp-top{
+.exp-item:last-child{
+  margin-bottom:0;
+}
+
+.exp-item::before{
+  content:'';
+  position:absolute;
+  left:-23px;
+  top:24px;
+  width:10px;
+  height:10px;
+  background:var(--pink);
+  border-radius:50%;
+  box-shadow:0 0 0 4px #fce7f3;
+}
+
+.exp-header{
   display:flex;
   justify-content:space-between;
   gap:12px;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
 .exp-role{
-  font-weight:600;
+  font-weight:700;
   font-size:15.5px;
-}
-
-.exp-date{
-  font-size:13.5px;
-  color:var(--muted);
-  white-space:nowrap;
 }
 
 .exp-org{
   font-size:14px;
   color:var(--muted);
-  margin-bottom:8px;
+}
+
+.exp-date{
+  font-size:13px;
+  color:#9ca3af;
+  white-space:nowrap;
 }
 
 .exp-desc{
-  font-size:14.8px;
+  font-size:14.6px;
   line-height:1.65;
-  color:#374151;
-}
-
-/* CONTACT */
-.contact{
-  margin-top:56px;
-  padding-top:26px;
-  border-top:1px solid var(--border);
-  display:flex;
-  gap:26px;
-  flex-wrap:wrap;
-  font-size:14.5px;
-}
-
-.contact a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:500;
-}
-
-.contact a:hover{
-  text-decoration:underline;
-}
-
-/* FOOTER */
-footer{
-  margin-top:60px;
-  font-size:13px;
   color:var(--muted);
 }
 
-/* RESPONSIVE */
-@media(max-width:640px){
-  h1{font-size:32px}
+/* ===== CONTACT ===== */
+.contact{
+  margin-top:52px;
+  background:#ffffff;
+  padding:32px 36px;
+  border-radius:26px;
+  box-shadow:0 24px 54px rgba(0,0,0,.1);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.contact h3{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.contact p{
+  font-size:14.8px;
+  line-height:1.65;
+  color:var(--muted);
+}
+
+.contact a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14.8px;
+  font-weight:600;
+  color:var(--pink);
+  text-decoration:none;
+  margin-bottom:14px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  margin-top:56px;
+  font-size:13.5px;
+  color:#9ca3af;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .photo{margin-top:24px}
+  .contact{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -155,66 +232,95 @@ footer{
 <body>
 <div class="container">
 
-<header>
-  <h1>Caroline Carel Cinda Suryadi</h1>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Caroline Carel Cinda Suryadi</h1>
 
-  <div class="intent">
-    Interested in Business Analysis · Open to Internship Opportunities
+    <div class="intent">
+      Interested in Business Analysis · Open to Internship Opportunities
+    </div>
+
+    <div class="education">
+      3rd Year Information Systems Student — UNIKA Atma Jaya Jakarta
+    </div>
+
+    <p class="summary">
+      Experienced in organizational finance, budgeting, and cross-division coordination.
+      Able to work with structured processes, manage responsibilities, and support
+      decision-making through clear documentation and financial monitoring.
+    </p>
   </div>
 
-  <div class="education">
-    3rd Year Information Systems Student — UNIKA Atma Jaya Jakarta
+  <div class="photo">
+    <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Cinda Suryadi">
   </div>
+</div>
 
-  <p class="summary">
-    Information Systems student with strong organizational experience,
-    particularly in budgeting, financial monitoring, and cross-division coordination.
-    Comfortable working with structured processes and supporting team objectives.
-  </p>
-</header>
-
+<!-- EXPERIENCE -->
 <section>
   <h2>Organizational Experience</h2>
 
-  <div class="exp-list">
+  <div class="exp-wrapper">
+    <div class="timeline">
 
-    <div class="exp-item">
-      <div class="exp-top">
-        <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
-        <div class="exp-date">Jan 2025 – Present</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
+            <div class="exp-org">
+              Student Senate — Faculty of Biosciences, Technology, and Innovation
+            </div>
+          </div>
+          <div class="exp-date">Jan 2025 – Present</div>
+        </div>
+        <div class="exp-desc">
+          Led budgeting and financial planning for 6 divisions (29 members),
+          prepared official budget proposals, supervised expenditures,
+          and ensured transparent financial reporting across organizational programs.
+        </div>
       </div>
-      <div class="exp-org">
-        Student Senate — Faculty of Biosciences, Technology, and Innovation
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Fundraising & Business Staff</div>
+            <div class="exp-org">
+              Student Senate — Faculty of Engineering
+            </div>
+          </div>
+          <div class="exp-date">Feb 2024 – Dec 2025</div>
+        </div>
+        <div class="exp-desc">
+          Supported fundraising initiatives and managed the sale of 300+ units
+          of official merchandise, contributing to organizational revenue
+          and program sustainability.
+        </div>
       </div>
-      <div class="exp-desc">
-        Led budgeting and financial planning for 6 divisions (29 members),
-        prepared official budget proposals, monitored expenditures,
-        and ensured transparent financial reporting.
-      </div>
+
     </div>
-
-    <div class="exp-item">
-      <div class="exp-top">
-        <div class="exp-role">Fundraising & Business Staff</div>
-        <div class="exp-date">Feb 2024 – Dec 2025</div>
-      </div>
-      <div class="exp-org">
-        Student Senate — Faculty of Engineering
-      </div>
-      <div class="exp-desc">
-        Supported fundraising initiatives and managed the sale of 300+
-        units of official merchandise, contributing to organizational revenue
-        and program sustainability.
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section class="contact">
-  <a href="mailto:carolineccsuryadi@gmail.com">carolineccsuryadi@gmail.com</a>
-  <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">LinkedIn</a>
-  <a href="cv.pdf" target="_blank">Download CV</a>
+<!-- CONTACT -->
+<section>
+  <div class="contact">
+    <div>
+      <h3>Let’s Connect</h3>
+      <p>
+        Open to internship opportunities and professional discussions related to
+        business analysis, operations, and organizational support.
+      </p>
+    </div>
+
+    <div>
+      <a href="cv.pdf" target="_blank">📄 Download CV</a>
+      <a href="mailto:carolineccsuryadi@gmail.com">✉️ carolineccsuryadi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">
+        🔗 LinkedIn Profile
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
