@@ -24,8 +24,8 @@
 body{
   margin:0;
   background:
-    radial-gradient(circle at 15% 20%, var(--peach) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, var(--lav) 0%, transparent 45%),
+    radial-gradient(circle at 20% 15%, var(--peach), transparent 45%),
+    radial-gradient(circle at 85% 65%, var(--lav), transparent 45%),
     linear-gradient(180deg,var(--cream),#f3f5fb);
   color:var(--text);
 }
@@ -33,55 +33,55 @@ body{
 .container{
   max-width:980px;
   margin:0 auto;
-  padding:42px 28px 68px;
+  padding:40px 26px 64px;
 }
 
 /* HERO */
 .hero{
   display:grid;
-  grid-template-columns:1fr 260px;
-  gap:40px;
+  grid-template-columns:1fr 250px;
+  gap:36px;
   align-items:center;
 }
 
 .hero h1{
-  font-size:42px;
-  margin:0 0 10px;
+  font-size:44px;
+  margin:0 0 12px;
   font-weight:700;
 }
 
 .intent{
-  font-size:18px;
+  font-size:19px;
   font-weight:700;
   color:var(--pink);
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 .education{
   display:inline-block;
   background:#fff;
-  padding:8px 14px;
-  border-radius:12px;
-  font-size:14px;
+  padding:9px 16px;
+  border-radius:14px;
+  font-size:14.5px;
   font-weight:600;
-  box-shadow:0 4px 14px rgba(0,0,0,.06);
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
   margin-bottom:18px;
 }
 
 .summary{
-  font-size:15.5px;
+  font-size:15.8px;
   line-height:1.7;
   color:var(--muted);
-  max-width:600px;
+  max-width:620px;
 }
 
 /* PHOTO */
 .photo{
-  width:260px;
-  height:340px;
-  border-radius:20px;
+  width:250px;
+  height:330px;
+  border-radius:22px;
   overflow:hidden;
-  background:linear-gradient(135deg,#f5a8c4,#d2d4ff);
+  background:linear-gradient(135deg,#f6a9c5,#d2d5ff);
   box-shadow:0 26px 60px rgba(0,0,0,.18);
 }
 .photo img{
@@ -90,30 +90,52 @@ body{
   object-fit:cover;
 }
 
+/* SOFT DIVIDER (NO GAP) */
+.section-divider{
+  height:90px;
+  margin-top:-20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(217,79,138,.22), transparent 70%);
+}
+
 /* SECTION */
 section{
-  margin-top:64px;
+  margin-top:40px;
 }
 
 section h2{
   font-size:22px;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
-/* EXPERIENCE TIMELINE */
+/* EXPERIENCE WRAPPER */
+.exp-wrapper{
+  background:linear-gradient(135deg,#ffffff,#fff5fa);
+  padding:32px 26px;
+  border-radius:28px;
+  box-shadow:0 30px 70px rgba(0,0,0,.08);
+}
+
+/* TIMELINE */
 .timeline{
   position:relative;
-  padding-left:26px;
+  padding-left:30px;
 }
 
 .timeline::before{
   content:'';
   position:absolute;
-  left:6px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:linear-gradient(180deg,var(--pink),transparent);
+  left:9px;
+  top:10px;
+  bottom:10px;
+  width:3px;
+  border-radius:3px;
+  background:linear-gradient(
+    180deg,
+    rgba(217,79,138,.65),
+    rgba(217,79,138,.25),
+    transparent
+  );
 }
 
 .exp-item{
@@ -121,33 +143,37 @@ section h2{
   background:var(--card);
   padding:22px 24px;
   border-radius:18px;
-  box-shadow:0 16px 40px rgba(0,0,0,.07);
-  margin-bottom:22px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+  margin-bottom:20px;
 }
+
+.exp-item:last-child{margin-bottom:0}
 
 .exp-item::before{
   content:'';
   position:absolute;
-  left:-32px;
-  top:26px;
-  width:14px;
-  height:14px;
-  background:var(--pink);
+  left:-38px;
+  top:28px;
+  width:16px;
+  height:16px;
+  background:
+    radial-gradient(circle at 30% 30%, #fff, var(--pink));
   border-radius:50%;
-  box-shadow:0 0 0 6px rgba(217,79,138,.15);
+  box-shadow:
+    0 0 0 6px rgba(217,79,138,.18),
+    0 6px 14px rgba(0,0,0,.14);
 }
 
 .exp-header{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
   gap:12px;
   margin-bottom:8px;
 }
 
 .exp-role{
   font-weight:700;
-  font-size:15px;
+  font-size:15.5px;
 }
 
 .exp-org{
@@ -162,17 +188,18 @@ section h2{
 }
 
 .exp-desc{
-  font-size:14px;
+  font-size:14.5px;
   line-height:1.65;
   color:var(--muted);
 }
 
 /* CONTACT */
 .contact{
+  margin-top:52px;
   background:#ffffff;
-  padding:32px 36px;
-  border-radius:22px;
-  box-shadow:0 22px 60px rgba(0,0,0,.08);
+  padding:34px 38px;
+  border-radius:26px;
+  box-shadow:0 26px 60px rgba(0,0,0,.1);
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
@@ -184,18 +211,20 @@ section h2{
 }
 
 .contact p{
-  font-size:14.5px;
+  font-size:14.8px;
   line-height:1.65;
   color:var(--muted);
 }
 
 .contact a{
-  display:block;
-  font-size:14.5px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14.8px;
   font-weight:600;
   color:var(--pink);
   text-decoration:none;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 /* FOOTER */
@@ -218,6 +247,7 @@ footer{
 <body>
 <div class="container">
 
+<!-- HERO -->
 <div class="hero">
   <div>
     <h1>Caroline Carel Cinda Suryadi</h1>
@@ -231,9 +261,9 @@ footer{
     </div>
 
     <p class="summary">
-      Experienced in organizational finance, budgeting, and cross-division coordination.
-      Able to work with structured processes, manage responsibilities, and support
-      decision-making through clear documentation and financial monitoring.
+      An Information Systems student with strong organizational experience,
+      particularly in budgeting, financial monitoring, and cross-division coordination.
+      Comfortable working with structured processes and supporting team-driven goals.
     </p>
   </div>
 
@@ -242,57 +272,69 @@ footer{
   </div>
 </div>
 
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
 <section>
   <h2>Organizational Experience</h2>
 
-  <div class="timeline">
+  <div class="exp-wrapper">
+    <div class="timeline">
 
-    <div class="exp-item">
-      <div class="exp-header">
-        <div>
-          <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
-          <div class="exp-org">Student Senate — Faculty of Biosciences, Technology, and Innovation</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
+            <div class="exp-org">
+              Student Senate — Faculty of Biosciences, Technology, and Innovation
+            </div>
+          </div>
+          <div class="exp-date">Jan 2025 – Present</div>
         </div>
-        <div class="exp-date">Jan 2025 – Present</div>
-      </div>
-      <div class="exp-desc">
-        Led budgeting and financial planning for 6 divisions (29 members), prepared
-        official budget proposals to the university, supervised program expenditures,
-        and ensured transparent financial reporting across organizational activities.
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div>
-          <div class="exp-role">Fundraising & Business Staff</div>
-          <div class="exp-org">Student Senate — Faculty of Engineering</div>
+        <div class="exp-desc">
+          Led budgeting and financial planning for 6 divisions (29 members),
+          prepared official budget proposals, supervised expenditures,
+          and ensured transparent financial reporting across organizational programs.
         </div>
-        <div class="exp-date">Feb 2024 – Dec 2025</div>
       </div>
-      <div class="exp-desc">
-        Supported fundraising initiatives and managed the sale of 300+ units of
-        official merchandise, contributing to organizational revenue and program
-        sustainability.
-      </div>
-    </div>
 
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Fundraising & Business Staff</div>
+            <div class="exp-org">
+              Student Senate — Faculty of Engineering
+            </div>
+          </div>
+          <div class="exp-date">Feb 2024 – Dec 2025</div>
+        </div>
+        <div class="exp-desc">
+          Supported fundraising initiatives and managed the sale of 300+ units
+          of official merchandise, contributing to organizational revenue
+          and program sustainability.
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section>
   <div class="contact">
     <div>
-      <h3>Contact</h3>
+      <h3>Let’s Connect</h3>
       <p>
-        Open to internship opportunities and professional discussions related
-        to business analysis and organizational operations.
+        Open to internship opportunities and professional discussions
+        related to business analysis, operations, and organizational support.
       </p>
     </div>
 
     <div>
       <a href="cv.pdf" target="_blank">📄 Download CV</a>
-      <a href="mailto:carolineccsuryadi@gmail.com">✉️ carolineccsuryadi@gmail.com</a>
+      <a href="mailto:carolineccsuryadi@gmail.com">
+        ✉️ carolineccsuryadi@gmail.com
+      </a>
       <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">
         🔗 LinkedIn Profile
       </a>
