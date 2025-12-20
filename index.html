@@ -2,56 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Caroline Carel Suryadi | Aspiring Business Analyst</title>
+  <title>Caroline Carel Suryadi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --accent:#ff7fa8;
-      --accent-soft:#ffe6ef;
-      --text:#1f1f1f;
-      --muted:#666;
-      --bg:#faf7f9;
+      --pink:#ff8fb4;
+      --pink-light:#fff4f8;
+      --text:#1d1d1d;
+      --muted:#6c6c6c;
+      --card:#ffffffdd;
       font-family:'Poppins',system-ui;
     }
 
     *{box-sizing:border-box}
+
     body{
       margin:0;
       min-height:100vh;
       background:
-        radial-gradient(circle at top right, #ffd6e6 0%, transparent 45%),
-        radial-gradient(circle at bottom left, #ffeef5 0%, transparent 50%),
-        var(--bg);
+        radial-gradient(circle at top right, #ffe2ed 0%, transparent 45%),
+        radial-gradient(circle at bottom left, #ffeef4 0%, transparent 50%),
+        #fafafa;
       display:flex;
       align-items:center;
       justify-content:center;
       color:var(--text);
     }
 
-    .wrapper{
-      max-width:1020px;
+    .container{
+      max-width:1100px;
       width:100%;
-      padding:56px;
-      background:rgba(255,255,255,.78);
+      padding:64px;
+      background:var(--card);
       backdrop-filter: blur(14px);
-      border-radius:32px;
-      box-shadow:0 30px 80px rgba(0,0,0,.08);
+      border-radius:34px;
+      box-shadow:0 35px 85px rgba(0,0,0,.07);
       display:grid;
-      grid-template-columns:260px 1fr;
-      gap:52px;
+      grid-template-columns:300px 1fr;
+      gap:60px;
     }
 
-    /* PHOTO */
     .photo{
-      width:260px;
-      height:260px;
+      width:300px;
+      height:300px;
       border-radius:26px;
       overflow:hidden;
-      background:linear-gradient(135deg,#ffb7d5,#ff7fa8);
-      box-shadow:0 20px 45px rgba(255,127,168,.35);
+      background:linear-gradient(135deg,#ffc6db,#ff8fb4);
+      box-shadow:0 22px 48px rgba(255,143,180,.35);
     }
     .photo img{
       width:100%;
@@ -59,66 +59,71 @@
       object-fit:cover;
     }
 
-    /* CONTENT */
     h1{
       margin:0;
-      font-size:34px;
+      font-size:36px;
       font-weight:700;
-      letter-spacing:.2px;
     }
 
     .role{
-      margin:8px 0 18px;
-      font-weight:600;
-      color:var(--accent);
-    }
-
-    .desc{
+      margin:10px 0 22px;
       font-size:15px;
-      line-height:1.7;
+      font-weight:600;
+      color:var(--pink);
+    }
+
+    .summary{
+      max-width:700px;
+      font-size:15px;
+      line-height:1.75;
       color:var(--muted);
-      max-width:640px;
     }
 
-    .highlight{
-      margin-top:14px;
-      font-size:14px;
-      color:#444;
-      font-style:italic;
-    }
-
-    .chips{
-      margin-top:22px;
+    .skills{
+      margin-top:26px;
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
+      gap:12px;
     }
 
-    .chip{
-      background:var(--accent-soft);
-      padding:9px 16px;
+    .skill{
+      background:var(--pink-light);
+      padding:10px 18px;
       border-radius:999px;
       font-size:13px;
       font-weight:600;
     }
 
+    .section{
+      margin-top:36px;
+    }
+
+    .section h3{
+      font-size:15px;
+      margin-bottom:14px;
+      font-weight:700;
+    }
+
     .org{
-      margin-top:26px;
       font-size:14px;
-      line-height:1.65;
+      line-height:1.7;
       color:#444;
     }
-    .org b{font-weight:600}
 
-    .cta{
-      margin-top:32px;
+    .org b{
+      color:#222;
+      font-weight:600;
+    }
+
+    .actions{
+      margin-top:38px;
       display:flex;
-      gap:14px;
+      gap:16px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:14px 24px;
+      padding:14px 26px;
       border-radius:14px;
       font-size:14px;
       font-weight:600;
@@ -127,30 +132,29 @@
     }
 
     .btn.primary{
-      background:var(--accent);
+      background:var(--pink);
       color:white;
-      box-shadow:0 16px 35px rgba(255,127,168,.4);
+      box-shadow:0 16px 36px rgba(255,143,180,.45);
     }
 
     .btn.secondary{
-      border:1.5px solid var(--accent);
-      color:var(--accent);
       background:white;
+      border:1.5px solid var(--pink);
+      color:var(--pink);
     }
 
     .btn:hover{transform:translateY(-2px)}
 
     footer{
-      margin-top:26px;
+      margin-top:30px;
       font-size:13px;
-      color:#888;
+      color:#8a8a8a;
     }
 
     @media(max-width:900px){
-      body{align-items:flex-start}
-      .wrapper{
+      .container{
         grid-template-columns:1fr;
-        padding:36px;
+        padding:40px;
       }
       .photo{margin:auto}
     }
@@ -158,57 +162,54 @@
 </head>
 
 <body>
-  <main class="wrapper">
+  <main class="container">
 
-    <!-- LEFT -->
     <div class="photo">
       <img src="https://github.com/CarolineCarel.png" alt="Caroline Carel Suryadi">
     </div>
 
-    <!-- RIGHT -->
     <div>
       <h1>Caroline Carel Suryadi</h1>
       <div class="role">
-        Aspiring Business Analyst · Actively Seeking Internship Opportunity
+        Interested in Business Analysis · Open to Internship Opportunities
       </div>
 
-      <p class="desc">
-        An undergraduate student with strong organizational experience in finance, budgeting,
-        and program execution. I am passionate about business analysis, project coordination,
-        and translating real-world problems into structured and measurable solutions.
+      <p class="summary">
+        Undergraduate student with strong organizational experience and a proactive mindset.
+        Known for being collaborative, reliable, and detail-oriented, with a growing interest
+        in business analysis and structured problem-solving. Comfortable working with
+        stakeholders, managing budgets, and supporting program execution.
       </p>
 
-      <p class="highlight">
-        Eager to learn, open to feedback, and highly motivated to grow through hands-on experience
-        in a professional business environment.
-      </p>
-
-      <div class="chips">
-        <span class="chip">Business Analysis</span>
-        <span class="chip">Requirement Gathering</span>
-        <span class="chip">Process Mapping</span>
-        <span class="chip">Budget Analysis</span>
-        <span class="chip">Stakeholder Communication</span>
+      <div class="skills">
+        <span class="skill">Business Analysis Fundamentals</span>
+        <span class="skill">Process Thinking</span>
+        <span class="skill">Budget & Financial Monitoring</span>
+        <span class="skill">Stakeholder Coordination</span>
+        <span class="skill">Organizational Planning</span>
       </div>
 
-      <div class="org">
-        <b>Student Senate – Faculty of Biosciences, Technology & Innovation (SMFBTI)</b><br>
-        Treasurer · Managed budgeting and financial planning for 6 divisions (29 members),
-        supervised funding for 7 organizational programs including external collaborations.
-        <br><br>
-        <b>Student Senate – Faculty of Engineering (SMFT)</b><br>
-        Fundraising & Business Staff · Generated organizational revenue through merchandise sales
-        (300+ units).
+      <div class="section">
+        <h3>Organizational Experience</h3>
+        <div class="org">
+          <b>Student Senate – Faculty of Biosciences, Technology & Innovation (SMFBTI)</b><br>
+          Treasurer · Oversaw budgeting and financial planning for 6 divisions (29 members) and
+          supervised financial execution of 7 organizational programs, including external collaboration.
+          <br><br>
+          <b>Student Senate – Faculty of Engineering (SMFT)</b><br>
+          Fundraising & Business Staff · Contributed to fundraising initiatives and managed
+          merchandise sales (300+ units).
+        </div>
       </div>
 
-      <div class="cta">
+      <div class="actions">
         <a class="btn primary" href="cv.pdf" target="_blank">View CV</a>
-        <a class="btn secondary" href="mailto:carolineccsuryadi@gmail.com">Email Me</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/caroline-suryadi-8725bb28a/" target="_blank">LinkedIn</a>
+        <a class="btn secondary" href="mailto:carolineccsuryadi@gmail.com">Email</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">LinkedIn</a>
       </div>
 
       <footer>
-        Jakarta, Indonesia · Open to Business Analyst Internship Opportunities
+        Jakarta, Indonesia · Actively Seeking Business Analyst Internship
       </footer>
     </div>
 
