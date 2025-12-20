@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Caroline Carel Suryadi | Business Analyst Intern</title>
-  <meta name="description" content="Business Analyst Intern candidate with strong interest in Project Management, Process Improvement, and Data-Driven Decision Making." />
+
+  <meta name="description"
+    content="Business Analyst Intern candidate with strong organizational leadership, budgeting experience, and data-driven mindset." />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,9 +20,8 @@
       --accent-start:#ffb7d5;
       --accent-end:#ff7fa8;
       --accent-grad:linear-gradient(135deg,var(--accent-start),var(--accent-end));
-      --radius:18px;
-      --maxw:1040px;
-      font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont;
+      --maxw:1080px;
+      font-family:'Poppins',system-ui,-apple-system;
     }
 
     *{box-sizing:border-box}
@@ -30,32 +31,32 @@
     main{
       max-width:var(--maxw);
       margin:48px auto;
-      padding:40px;
+      padding:44px;
       background:var(--card);
       border-radius:28px;
-      box-shadow:0 10px 40px rgba(0,0,0,.06);
+      box-shadow:0 14px 48px rgba(0,0,0,.06);
     }
 
     /* HERO */
     .hero{
       display:grid;
-      grid-template-columns:200px 1fr;
-      gap:32px;
+      grid-template-columns:220px 1fr;
+      gap:36px;
       align-items:center;
     }
 
     .avatar{
-      width:200px;
-      height:200px;
-      border-radius:20px;
+      width:220px;
+      height:220px;
+      border-radius:22px;
       overflow:hidden;
       background:var(--accent-grad);
-      box-shadow:0 10px 25px rgba(255,127,168,.18);
+      box-shadow:0 12px 30px rgba(255,127,168,.25);
     }
     .avatar img{width:100%;height:100%;object-fit:cover}
 
-    .name{font-size:28px;font-weight:700;margin:0}
-    .role{margin:6px 0 14px;color:var(--muted);font-size:15px}
+    .name{font-size:30px;font-weight:700;margin:0}
+    .role{margin:8px 0 16px;color:var(--muted);font-size:15px}
 
     .badges{display:flex;gap:10px;flex-wrap:wrap}
     .badge{
@@ -70,20 +71,26 @@
     .cta{
       display:inline-block;
       margin-top:18px;
-      padding:14px 22px;
+      padding:14px 26px;
       background:var(--accent-grad);
       color:#fff;
       font-weight:700;
       border-radius:14px;
-      box-shadow:0 10px 25px rgba(255,127,168,.25);
+      box-shadow:0 14px 32px rgba(255,127,168,.3);
       transition:.2s;
+    }
+    .cta.secondary{
+      background:#fff;
+      color:var(--accent-end);
+      border:1px solid rgba(255,127,168,.4);
+      margin-left:10px;
     }
     .cta:hover{transform:translateY(-3px)}
 
     .summary{
-      margin-top:18px;
-      max-width:720px;
-      line-height:1.6;
+      margin-top:20px;
+      max-width:760px;
+      line-height:1.65;
       font-size:15px;
       color:#4d4550;
     }
@@ -91,20 +98,20 @@
     /* CONTENT */
     .content{
       display:grid;
-      grid-template-columns:1fr 340px;
-      gap:24px;
-      margin-top:40px;
+      grid-template-columns:1fr 360px;
+      gap:28px;
+      margin-top:48px;
     }
 
     .card{
-      padding:20px;
-      border-radius:16px;
+      padding:24px;
+      border-radius:18px;
       border:1px solid rgba(0,0,0,.06);
       background:#fff;
     }
 
     h3{
-      margin:0 0 12px;
+      margin:0 0 14px;
       font-size:16px;
       font-weight:700;
     }
@@ -119,28 +126,28 @@
       color:var(--muted);
     }
 
-    .project{
-      padding:14px;
+    .item{
+      padding:16px;
       border-radius:14px;
       border:1px solid rgba(0,0,0,.05);
-      margin-bottom:12px;
-      transition:.15s;
+      margin-bottom:14px;
     }
-    .project:hover{transform:translateY(-3px)}
-    .project-title{font-weight:700}
-    .project-desc{font-size:13px;color:var(--muted)}
+
+    .item-title{font-weight:700}
+    .item-meta{font-size:13px;color:var(--muted);margin:4px 0 6px}
+    .item-desc{font-size:14px;color:#4d4550;line-height:1.55}
 
     /* SIDEBAR */
     .contact a{
       display:block;
-      margin-bottom:10px;
+      margin-bottom:12px;
       font-weight:600;
       color:var(--accent-end);
     }
 
     footer{
       text-align:center;
-      margin-top:36px;
+      margin-top:44px;
       font-size:13px;
       color:var(--muted);
     }
@@ -163,21 +170,23 @@
 
     <div>
       <h1 class="name">Caroline Carel Suryadi</h1>
-      <p class="role">Business Analyst Intern Candidate · Project Management Enthusiast</p>
+      <p class="role">Business Analyst Intern · Project & Organizational Leadership</p>
 
       <div class="badges">
         <span class="badge">Business Analysis</span>
         <span class="badge">Project Management</span>
-        <span class="badge">Process Improvement</span>
-        <span class="badge">Indonesia</span>
+        <span class="badge">Financial Planning</span>
+        <span class="badge">Stakeholder Communication</span>
       </div>
 
       <a class="cta" href="#contact">Apply for Internship</a>
+      <a class="cta secondary" href="cv.pdf" target="_blank">View CV</a>
 
       <p class="summary">
-        Business Analyst enthusiast with strong interest in project management, workflow optimization,
-        and data-driven decision making. Experienced in translating business needs into structured solutions
-        and supporting digital projects through clear analysis and stakeholder communication.
+        Business Analyst intern candidate with strong experience in organizational finance,
+        budgeting, and program execution. Skilled in translating operational needs into
+        structured documentation, supporting strategic planning, and contributing to
+        data-driven decision making within cross-functional teams.
       </p>
     </div>
   </section>
@@ -185,41 +194,101 @@
   <!-- CONTENT -->
   <section class="content">
     <div>
+
+      <!-- CORE SKILLS -->
       <div class="card">
-        <h3>What I Can Contribute</h3>
+        <h3>Core Business Analyst Competencies</h3>
         <div class="skills">
           <span class="skill">Requirement Analysis</span>
-          <span class="skill">Process Mapping</span>
-          <span class="skill">Stakeholder Communication</span>
+          <span class="skill">Business Process Mapping</span>
+          <span class="skill">Stakeholder Analysis</span>
           <span class="skill">Project Documentation</span>
+          <span class="skill">Budget Analysis</span>
+          <span class="skill">Problem Solving</span>
           <span class="skill">JIRA</span>
           <span class="skill">Miro</span>
         </div>
       </div>
 
-      <div class="card" style="margin-top:18px">
-        <h3>Selected Projects</h3>
+      <!-- ORGANIZATION -->
+      <div class="card" style="margin-top:20px">
+        <h3>Organizational Experience</h3>
 
-        <div class="project">
-          <div class="project-title">Billiard Booking System</div>
-          <div class="project-desc">
-            Designed booking flow and payment logic, translating user needs into functional system requirements.
+        <div class="item">
+          <div class="item-title">
+            Treasurer — Biosciences, Technology, and Innovation Faculty’s Student Senate (SMFBTI)
+          </div>
+          <div class="item-meta">December 2025 – Present · Jakarta, Indonesia</div>
+          <div class="item-desc">
+            Overseeing organizational financial operations, budgeting processes, and funding strategies.
+            Preparing structured financial frameworks to support divisional programs and long-term planning.
           </div>
         </div>
 
-        <div class="project">
-          <div class="project-title">YOLO Object Detection Experiment</div>
-          <div class="project-desc">
-            Conducted model training and evaluation, focusing on performance metrics and deployment feasibility.
+        <div class="item">
+          <div class="item-title">
+            Treasurer — SMFBTI
+          </div>
+          <div class="item-meta">January 2025 – November 2025</div>
+          <div class="item-desc">
+            Managed financial administration for 6 divisions (29 members), including budget proposal preparation,
+            financial monitoring, and internal accounting. Supervised financial execution of 7 organizational programs,
+            including 2 collaborative programs with external organizations.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            Fundraising & Business Staff — Engineering Faculty’s Student Senate (SMFT)
+          </div>
+          <div class="item-meta">February 2024 – December 2025</div>
+          <div class="item-desc">
+            Supported planning and execution of fundraising initiatives.
+            Successfully managed sales of 300+ units of official merchandise,
+            contributing to organizational revenue growth and brand visibility.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            Member & Co-Author — Young Catholic Student (YCS) Atma Jaya
+          </div>
+          <div class="item-meta">January 2024 – Present</div>
+          <div class="item-desc">
+            Co-authored a scientific paper on interpersonal relations and contributed to community
+            development and reflective programs.
           </div>
         </div>
       </div>
+
+      <!-- PROJECTS -->
+      <div class="card" style="margin-top:20px">
+        <h3>Selected Academic & Personal Projects</h3>
+
+        <div class="item">
+          <div class="item-title">Billiard Booking System</div>
+          <div class="item-desc">
+            Designed business flow and payment logic by translating operational requirements
+            into a structured booking and transaction system.
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">YOLO Object Detection Experiment</div>
+          <div class="item-desc">
+            Conducted model experimentation and evaluation, focusing on performance analysis
+            and implementation feasibility.
+          </div>
+        </div>
+      </div>
+
     </div>
 
+    <!-- CONTACT -->
     <aside>
       <div class="card contact" id="contact">
         <h3>Contact</h3>
-        <a href="mailto:carolinesuryadi61@gmail.com">carolinesuryadi61@gmail.com</a>
+        <a href="mailto:carolineccsuryadi@gmail.com">carolineccsuryadi@gmail.com</a>
         <a href="https://www.linkedin.com/in/caroline-suryadi-8725bb28a/" target="_blank">LinkedIn</a>
         <a href="https://github.com/CarolineCarel" target="_blank">GitHub</a>
       </div>
@@ -227,7 +296,7 @@
   </section>
 
   <footer>
-    © 2025 Caroline Carel Suryadi · Internship Portfolio
+    © 2025 Caroline Carel Suryadi · Business Analyst Intern Portfolio
   </footer>
 
 </main>
