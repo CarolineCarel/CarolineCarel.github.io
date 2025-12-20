@@ -11,8 +11,8 @@
 :root{
   --text:#111827;
   --muted:#6b7280;
-  --line:#e5e7eb;
-  --accent:#1f2937;
+  --border:#e5e7eb;
+  --accent:#ec4899;
   font-family:'Inter',system-ui;
 }
 
@@ -20,66 +20,72 @@
 
 body{
   margin:0;
-  background:#ffffff;
+  background:
+    linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
   color:var(--text);
 }
 
 .container{
-  max-width:880px;
+  max-width:920px;
   margin:0 auto;
-  padding:48px 24px 72px;
+  padding:52px 26px 72px;
 }
 
 /* HEADER */
 header{
-  border-bottom:1px solid var(--line);
-  padding-bottom:28px;
-  margin-bottom:40px;
+  margin-bottom:44px;
 }
 
 h1{
-  font-size:36px;
-  font-weight:700;
+  font-size:40px;
   margin:0 0 10px;
+  font-weight:700;
 }
 
 .intent{
-  font-size:17px;
+  font-size:18px;
   font-weight:600;
-  margin-bottom:10px;
+  color:var(--accent);
+  margin-bottom:8px;
 }
 
 .education{
   font-size:15px;
   color:var(--muted);
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
 .summary{
-  font-size:15px;
+  font-size:15.5px;
   line-height:1.7;
-  max-width:720px;
-  color:var(--muted);
+  color:#374151;
+  max-width:760px;
 }
 
 /* SECTION */
 section{
-  margin-bottom:42px;
+  margin-top:46px;
 }
 
 h2{
-  font-size:18px;
-  margin-bottom:18px;
+  font-size:20px;
+  margin-bottom:20px;
   font-weight:700;
 }
 
-/* EXPERIENCE */
-.exp-item{
-  padding:18px 0;
-  border-bottom:1px solid var(--line);
+/* EXPERIENCE LIST (NO TIMELINE) */
+.exp-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
-.exp-item:last-child{border-bottom:none}
+.exp-item{
+  padding:22px 24px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:#fff;
+}
 
 .exp-top{
   display:flex;
@@ -90,11 +96,11 @@ h2{
 
 .exp-role{
   font-weight:600;
-  font-size:15px;
+  font-size:15.5px;
 }
 
 .exp-date{
-  font-size:13px;
+  font-size:13.5px;
   color:var(--muted);
   white-space:nowrap;
 }
@@ -102,41 +108,46 @@ h2{
 .exp-org{
   font-size:14px;
   color:var(--muted);
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
 .exp-desc{
-  font-size:14.5px;
+  font-size:14.8px;
   line-height:1.65;
-  color:var(--text);
+  color:#374151;
 }
 
 /* CONTACT */
 .contact{
-  border-top:1px solid var(--line);
+  margin-top:56px;
   padding-top:26px;
+  border-top:1px solid var(--border);
   display:flex;
+  gap:26px;
   flex-wrap:wrap;
-  gap:22px;
   font-size:14.5px;
 }
 
 .contact a{
   text-decoration:none;
-  color:var(--accent);
+  color:var(--text);
   font-weight:500;
+}
+
+.contact a:hover{
+  text-decoration:underline;
 }
 
 /* FOOTER */
 footer{
-  margin-top:56px;
+  margin-top:60px;
   font-size:13px;
   color:var(--muted);
 }
 
 /* RESPONSIVE */
 @media(max-width:640px){
-  h1{font-size:30px}
+  h1{font-size:32px}
 }
 </style>
 </head>
@@ -158,43 +169,46 @@ footer{
   <p class="summary">
     Information Systems student with strong organizational experience,
     particularly in budgeting, financial monitoring, and cross-division coordination.
-    Comfortable working with structured processes and supporting team-driven goals.
+    Comfortable working with structured processes and supporting team objectives.
   </p>
 </header>
 
 <section>
   <h2>Organizational Experience</h2>
 
-  <div class="exp-item">
-    <div class="exp-top">
-      <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
-      <div class="exp-date">Jan 2025 – Present</div>
-    </div>
-    <div class="exp-org">
-      Student Senate — Faculty of Biosciences, Technology, and Innovation
-    </div>
-    <div class="exp-desc">
-      Led budgeting and financial planning for 6 divisions (29 members), prepared
-      official budget proposals, supervised program expenditures, and ensured
-      transparent financial reporting across organizational activities.
-    </div>
-  </div>
+  <div class="exp-list">
 
-  <div class="exp-item">
-    <div class="exp-top">
-      <div class="exp-role">Fundraising & Business Staff</div>
-      <div class="exp-date">Feb 2024 – Dec 2025</div>
+    <div class="exp-item">
+      <div class="exp-top">
+        <div class="exp-role">Treasurer (Two Consecutive Terms)</div>
+        <div class="exp-date">Jan 2025 – Present</div>
+      </div>
+      <div class="exp-org">
+        Student Senate — Faculty of Biosciences, Technology, and Innovation
+      </div>
+      <div class="exp-desc">
+        Led budgeting and financial planning for 6 divisions (29 members),
+        prepared official budget proposals, monitored expenditures,
+        and ensured transparent financial reporting.
+      </div>
     </div>
-    <div class="exp-org">
-      Student Senate — Faculty of Engineering
-    </div>
-    <div class="exp-desc">
-      Supported fundraising initiatives and managed the sale of 300+ units of
-      official merchandise, contributing to organizational revenue and program
-      sustainability.
-    </div>
-  </div>
 
+    <div class="exp-item">
+      <div class="exp-top">
+        <div class="exp-role">Fundraising & Business Staff</div>
+        <div class="exp-date">Feb 2024 – Dec 2025</div>
+      </div>
+      <div class="exp-org">
+        Student Senate — Faculty of Engineering
+      </div>
+      <div class="exp-desc">
+        Supported fundraising initiatives and managed the sale of 300+
+        units of official merchandise, contributing to organizational revenue
+        and program sustainability.
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="contact">
