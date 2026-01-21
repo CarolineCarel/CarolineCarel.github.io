@@ -97,7 +97,7 @@ body{
   margin-bottom:10px;
 }
 
-/* EDUCATION — NETRAL, NO BUBBLE */
+/* EDUCATION */
 .education{
   font-size:15px;
   font-weight:500;
@@ -213,6 +213,19 @@ section h2{
   color:var(--muted);
 }
 
+/* ===== PROJECT LINK STYLE ===== */
+.project-link{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--pink);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.project-link:hover{
+  text-decoration:underline;
+}
+
 /* ===== CONTACT ===== */
 .contact{
   background:#ffffff;
@@ -271,8 +284,8 @@ footer{
     <a href="#about" class="nav-name">About</a>
     <div class="nav-links">
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="cv.pdf" target="_blank">CV</a>
     </div>
   </div>
 </nav>
@@ -348,6 +361,33 @@ footer{
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="exp-wrapper">
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Decision Support System for Watch Selection (AHP)</div>
+          <div class="exp-org">Web-based System</div>
+        </div>
+        <div class="exp-date">2025</div>
+      </div>
+
+      <div class="exp-desc">
+        Developed a web-based decision support system using the Analytical Hierarchy Process (AHP)
+        method to recommend suitable watches based on multiple criteria such as color compatibility,
+        event theme, material, design, price, and gender fit.
+        <br>
+        <a class="project-link" href="https://carolinecarel.github.io/Glimpse-SPK-Jam-Tangan/" target="_blank">
+          🔗 View Project Website
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact">
@@ -360,7 +400,6 @@ footer{
     </div>
 
     <div>
-      <a href="cv.pdf" target="_blank">📄 Download CV</a>
       <a href="mailto:carolineccsuryadi@gmail.com">✉️ carolineccsuryadi@gmail.com</a>
       <a href="https://www.linkedin.com/in/carolinecarelcindasuryadi" target="_blank">
         🔗 LinkedIn Profile
